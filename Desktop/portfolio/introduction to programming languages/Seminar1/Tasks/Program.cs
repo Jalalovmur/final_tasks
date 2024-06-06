@@ -59,42 +59,66 @@
 
 
 
-using System.Globalization;
+// using System.Globalization;
 
-bool Limit (int x)
-{
-    if (x >= 10 && x <=99)
-    {
-       return true;
-    }
-    return false;
-}
+// bool Limit (int x)
+// {
+//     if (x >= 10 && x <=99)
+//     {
+//        return true;
+//     }
+//     return false;
+// }
 
-void MaxOfTwoNumbers(int x)
-{
-    if (Limit (x))
-    {
-        int a = x / 10;
-        int b = x % 10;  
-        if(a > b)
-        {
-            Console.WriteLine(a);
-        }
-        if(a == b)
-        {
-            Console.WriteLine("the numbers are equal");
-        }
-        else
-        {
-            Console.WriteLine(b);
-        }
-    }
-    else 
-    {
-        Console.WriteLine("number is out of the limit");
-    }
-}
+// void MaxOfTwoNumbers(int x)
+// {
+//     if (Limit (x))
+//     {
+//         int a = x / 10;
+//         int b = x % 10;  
+//         if(a > b)
+//         {
+//             Console.WriteLine(a);
+//         }
+//         if(a == b)
+//         {
+//             Console.WriteLine("the numbers are equal");
+//         }
+//         else
+//         {
+//             Console.WriteLine(b);
+//         }
+//     }
+//     else 
+//     {
+//         Console.WriteLine("number is out of the limit");
+//     }
+// }
+
+// Console.WriteLine("input number: " );
+// int c = Convert.ToInt32(Console.ReadLine());
+// MaxOfTwoNumbers(c);
+
+
+
 
 Console.WriteLine("input number: " );
-int c = Convert.ToInt32(Console.ReadLine());
-MaxOfTwoNumbers(c);
+int n = Convert.ToInt32(Console.ReadLine());
+while(n > 9)
+{
+    int x = n % 10;
+    System.Console.Write(x + ", ");
+    n = n / 10;
+} 
+System.Console.Write(n % 10);
+
+
+
+// Console.WriteLine("input number: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// int start = -n;
+// while(start <= n)
+// {
+//     System.Console.Write(start + " ");
+//     start++;
+// } 
